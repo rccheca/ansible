@@ -1,9 +1,8 @@
 - hosts: localhost
   become: true
-  tasks:
-  - name: Install Packages
-    yum: name={{item}}
-    with_items:
-      - sysstat
-      - net-tools
+ # pre_tasks:
+ #   - name: update repositories
+ #     yum: update
 
+  tasks:
+   - include: tasks/packages.yml 
