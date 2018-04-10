@@ -1,4 +1,4 @@
-- host: localhost
+- host: ansible
   become: true
   tasks:
   - name: Install htop
