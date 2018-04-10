@@ -1,8 +1,9 @@
 - hosts: localhost
   become: true
   tasks:
-  - name: Install Sysstat
-    yum: name=sysstat
-  - name: Install Net-tools
-    yum: name=net-tools
+  - name: Install Packages
+    yum: name={{item}}
+    with_items:
+      - sysstat
+      - net-tools
 
