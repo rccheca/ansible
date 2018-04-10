@@ -3,3 +3,6 @@
   tasks:
   - name: Install Sysstat
     yum: name=sysstat
+  - name: Install Net-tools
+    yum: name=net-tools
+
